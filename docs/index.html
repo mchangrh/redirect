@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      @import url("style.css");
+    </style>
+  </head>
+  <body>  
+    <div class="hero align">
+      <input id="url" value="https://sponsorblock.works">
+      <button onclick="follow()">Follow Redirect</button>
+      <br>
+      <div id="source"></div>
+      <pre>↓</pre>
+      <div id="result" class="align"></div>
+    </div>
+    <script>
+      document.getElementById("url").addEventListener("keydown", function(e) {
+        event.stopPropagation()
+        if (event.key !== "Enter") return
+        return follow()
+      })
+      async function follow() {
+        const url = document.getElementById("url").value;
+        document.getElementById("source").innerHTML = url
+        await fetch(`https://redirect.mchang.workers.dev?url=${url}`)
+        .then(resp =>
+          resp.text()
+        ).then(text => {
+          text = text.replace(/\n/gm, "<p>↓</p>");
+          document.getElementById("result").innerHTML = text
+        })
+      }
+    </script>
+  </body>
+</html>

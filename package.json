@@ -1,0 +1,19 @@
+{
+  "name": "@mchangrh/redirect",
+  "version": "1.0.0",
+  "description": "follow redirect chain",
+  "main": "src/redirect.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mchangrh/ip.git"
+  },
+  "author": "Michael Chang <michael@mchang.name>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mchangrh/ip/issues"
+  },
+  "homepage": "https://github.com/mchangrh/ip#readme"
+}
