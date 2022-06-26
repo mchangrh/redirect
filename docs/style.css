@@ -8,6 +8,8 @@ div, pre, input, button {
   font-family: inherit;
   font-size: inherit;
   color: inherit;
+}
+div {
   width: 100%;
 }
 input {
