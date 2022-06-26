@@ -8,6 +8,7 @@ div, pre, input, button {
   font-family: inherit;
   font-size: inherit;
   color: inherit;
+  width: 100%;
 }
 input {
   width: 430px;

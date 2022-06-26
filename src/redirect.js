@@ -7,7 +7,7 @@ async function handleRequest(request) {
   if (request.method === "OPTIONS") return new Response(null, { status: 200, headers });
   const urls = [];
   const followLink = async (url) => {
-    const response = await fetch(url, { redirect: "manual", method: "HEAD" })
+    const response = await fetch(url, { redirect: "manual" })
     let newURL = response.headers.get("Location")
     if (newURL) {
       if (!newURL.includes("://")) newURL = new URL(newURL, url).href
